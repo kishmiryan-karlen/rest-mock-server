@@ -1,7 +1,7 @@
 {
   "name": "rest-mock-server",
   "version": "1.0.0",
-  "description": "A simple mock server for REST APIs",
+  "description": "A simple mock server for RESTful APIs",
   "main": "index.js",
   "repository": "git@github.com:kishmiryan-karlen/rest-mock-server.git",
   "author": "Karlen Kishmiryan",
