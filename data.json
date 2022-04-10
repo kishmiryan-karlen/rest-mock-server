@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "7f7bf1a2-ba09-4c2a-9e7c-d0619bccfa45",
+      "name": "Joe"
+    }
+  ],
+  "posts": [
+    {
+      "id": "37490627-38d1-4f79-89c4-f226ff2180fd",
+      "message": "Hello World"
+    }
+  ]
+}
