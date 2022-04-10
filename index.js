@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const restify = require('restify');
 const { Resource } = require('./src/resource');
 
