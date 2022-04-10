@@ -31,6 +31,17 @@ class Handler {
     }
   }
 
+  async readAll(req, res) {
+    const data = await DataHelper.read();
+
+    try {
+      const resources = await this.action.readAll(data);
+      res.json(resources);
+    } catch (error) {
+      res.send(error.message);
+    }
+  }
+
   async update(req, res) {
     const data = await DataHelper.read();
 

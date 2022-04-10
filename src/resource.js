@@ -6,6 +6,7 @@ class Resource {
 
     server.post(`/${type}`, handler.create.bind(handler));
     server.get(`/${type}/:id`, handler.read.bind(handler));
+    server.get(`/${type}`, handler.readAll.bind(handler));
     server.put(`/${type}/:id`, handler.update.bind(handler));
     server.del(`/${type}/:id`, handler.delete.bind(handler));
   }

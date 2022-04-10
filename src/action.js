@@ -34,6 +34,16 @@ class Action {
     return resource;
   }
 
+  readAll(data) {
+    const resources = data[this.type] || [];
+
+    if (!resources.length) {
+      throw new Error('The resources do not exist');
+    }
+
+    return resources;
+  }
+
   update(data, id, resource) {
     const resourceInd = (data[this.type] || []).findIndex(resource => resource.id === id);
 
