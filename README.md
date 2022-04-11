@@ -17,7 +17,7 @@ It will also create a local `data.json` file, which acts as a DB storage.
 | Name                      | Description                                | Default                        |
 | ------------------------- | ------------------------------------------ | ------------------------------ |
 | &#x2011;&#x2011;resources | `string[]` comma-separated list of strings | users,posts                    |
-| &#x2011;&#x2011;data      | `string` path to the data file             | ./data&#x2011;<timestamp>.json |
+| &#x2011;&#x2011;data      | `string` path to the data file             | ./data&#x2011;{timestamp}.json |
 | &#x2011;&#x2011;port      | `number` port for the server               | 3003                           |
 
 ### Examples
