@@ -1,20 +1,18 @@
+const { getArg } = require('./arg-helper');
 const { Handler } = require('./handler');
 
 class Resource {
-  static init(processArgs, server) {
-    const resourcesArg = processArgs.find(arg => arg.startsWith('--resources='));
+  static init(server) {
+    const resourcesStr = getArg('resources');
+
     let useDefaultResources = true;
 
-    if (resourcesArg) {
-      const resourcesStr = resourcesArg.split('=')[1];
+    if (resourcesStr) {
+      const resources = resourcesStr.split(',');
 
-      if (resourcesStr) {
-        const resources = resourcesStr.split(',');
-
-        if (resources.length) {
-          resources.forEach(resource => Resource.add(resource.toLowerCase(), server));
-          useDefaultResources = false;
-        }
+      if (resources.length) {
+        resources.forEach(resource => Resource.add(resource.toLowerCase(), server));
+        useDefaultResources = false;
       }
     }
 

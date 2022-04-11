@@ -12,10 +12,6 @@ This will run a local server on the specified port with CRUD endpoints for given
 
 It will also create a local `data.json` file, which acts as a DB storage.
 
-`PORT` - Default: 3003
-
-<br />
-
 ### Options
 
 | Name        | Description                                | Default                   |
@@ -24,13 +20,7 @@ It will also create a local `data.json` file, which acts as a DB storage.
 | --data      | `string` path to the data file             | `./data-<timestamp>.json` |
 | --port      | `number` port for the server               | `3003`                    |
 
----
-
-<br />
-
 ### Examples
-
-<br />
 
 #### With no options
 
@@ -39,8 +29,6 @@ It will also create a local `data.json` file, which acts as a DB storage.
 `npx simple-rest-mock`
 
 The mock server will be running on port `3003`, using `data-<timestamp>.json` to hold the data and serving the `users` and `posts` resources.
-
-<br />
 
 #### With all options
 
