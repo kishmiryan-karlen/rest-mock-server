@@ -1,4 +1,4 @@
-# simple-rest-mock
+# Simple Mock Server for RESTful APIs
 
 A simple mock server for RESTful APIs. Easily add new resources with CRUD support and simple data handling.
 

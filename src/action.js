@@ -37,10 +37,6 @@ class Action {
   readAll(data) {
     const resources = data[this.type] || [];
 
-    if (!resources.length) {
-      throw new Error('The resources do not exist');
-    }
-
     return resources;
   }
 

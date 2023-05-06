@@ -13,10 +13,16 @@ class Handler {
     try {
       const [newData, resource] = await this.action.create(data, req.body);
       Data.write(newData);
-      res.json(resource);
+      res.json({
+        success: true,
+        data: resource,
+      });
     } catch (error) {
-      console.log(error)
-      res.send(error.message);
+      res.status(400);
+      res.json({
+        success: false,
+        error: error.message,
+      });
     }
   }
 
@@ -25,9 +31,16 @@ class Handler {
 
     try {
       const resource = await this.action.read(data, req.params.id);
-      res.json(resource);
+      res.json({
+        success: true,
+        data: resource,
+      });
     } catch (error) {
-      res.send(error.message);
+      res.status(404);
+      res.json({
+        success: false,
+        error: error.message,
+      });
     }
   }
 
@@ -36,9 +49,16 @@ class Handler {
 
     try {
       const resources = await this.action.readAll(data);
-      res.json(resources);
+      res.json({
+        success: true,
+        data: resources,
+      });
     } catch (error) {
-      res.send(error.message);
+      res.status(500);
+      res.json({
+        success: false,
+        error: error.message,
+      });
     }
   }
 
@@ -48,9 +68,16 @@ class Handler {
     try {
       const [newData, resource] = await this.action.update(data, req.params.id, req.body);
       Data.write(newData);
-      res.json(resource);
+      res.json({
+        success: true,
+        data: resource,
+      });
     } catch (error) {
-      res.send(error.message);
+      res.status(404);
+      res.json({
+        success: false,
+        error: error.message,
+      });
     }
   }
 
@@ -60,9 +87,16 @@ class Handler {
     try {
       const [newData, resourceId] = await this.action.delete(data, req.params.id);
       Data.write(newData);
-      res.json(resourceId);
+      res.json({
+        success: true,
+        data: resourceId,
+      });
     } catch (error) {
-      res.send(error.message);
+      res.status(404);
+      res.json({
+        success: false,
+        error: error.message,
+      });
     }
   }
 }
