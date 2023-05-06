@@ -1,5 +1,5 @@
 {
-  "name": "simple-rest-mock",
+  "name": "simple-rest-api-mock",
   "version": "1.1.4",
   "description": "A simple mock server for RESTful APIs",
   "main": "index.js",
@@ -10,5 +10,17 @@
   "dependencies": {
     "restify": "^8.6.1",
     "uuid": "^8.3.2"
-  }
+  },
+  "keywords": [
+    "node",
+    "express",
+    "rest",
+    "api",
+    "mock",
+    "server",
+    "json",
+    "simple",
+    "fast",
+    "local"
+  ]
 }
